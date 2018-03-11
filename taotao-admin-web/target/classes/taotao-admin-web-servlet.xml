@@ -40,5 +40,5 @@
     
     <!-- 配置引用服务，产生服务接口的代理对象 -->
     <dubbo:reference interface="com.taotao.admin.service.TestService"
-    	id="testService" timeout="60000"/>
+    	id="testService1" timeout="60000"/>
 </beans>
