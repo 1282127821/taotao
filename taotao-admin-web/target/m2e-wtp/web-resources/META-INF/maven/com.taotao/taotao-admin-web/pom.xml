@@ -68,6 +68,12 @@
 			<artifactId>taotao-admin-interface</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
+		<!-- 使用zookeeper必须导入依赖zkclient 他会依赖导入zookeeper.jar -->
+		<dependency>
+	    <groupId>com.github.sgroschupf</groupId>
+	    <artifactId>zkclient</artifactId>
+	    <version>0.1</version>
+	    </dependency>
 	</dependencies>
 
 	<!-- 构建部分 -->
