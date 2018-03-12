@@ -9,9 +9,12 @@ import com.taotao.admin.service.TestService;
 public class TestServiceImpl implements TestService {
 	@Autowired
 	private TestMapper testMapper;
+	@Autowired
+	private TestServiceImpl t;
 	
 	@Override
 	public String queryCurrentTime() {
+		System.out.println(t+"----------------------->执行了吗");
 		return testMapper.queryCurrentTime();
 	}
 

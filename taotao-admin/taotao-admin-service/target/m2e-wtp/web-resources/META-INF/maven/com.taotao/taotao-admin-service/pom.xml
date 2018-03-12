@@ -46,5 +46,11 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+		<!-- 使用zookeeper必须导入依赖zkclient 他会依赖导入zookeeper.jar -->
+		<dependency>
+	    <groupId>com.github.sgroschupf</groupId>
+	    <artifactId>zkclient</artifactId>
+	    <version>0.1</version>
+	</dependency>
 	</dependencies>
 </project>
