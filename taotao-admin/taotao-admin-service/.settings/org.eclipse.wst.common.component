@@ -7,10 +7,13 @@
         <dependent-module archiveName="taotao-admin-mapper-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/taotao-admin-mapper/taotao-admin-mapper">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="taotao-admin-pojo-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/taotao-admin-pojo/taotao-admin-pojo">
+        <dependent-module archiveName="taotao-admin-interface-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/taotao-admin-interface/taotao-admin-interface">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="taotao-admin-interface-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/taotao-admin-interface/taotao-admin-interface">
+        <dependent-module archiveName="taotao-common-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/taotao-common/taotao-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="taotao-admin-pojo-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/taotao-admin-pojo/taotao-admin-pojo">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="taotao-admin-service"/>

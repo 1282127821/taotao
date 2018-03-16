@@ -18,7 +18,8 @@
   	 
   	<!-- 配置开启组件扫描 -->
 	<context:component-scan base-package="com.taotao.admin.controller"/>
-	
+	<!-- 配置视图控制器 -->
+       <mvc:view-controller path="/" view-name="index"/>
 	<!-- 开启MVC注解驱动 -->
 	<mvc:annotation-driven/>
 	
@@ -29,7 +30,12 @@
 	
 	<!-- 配置静态资源用WEB容器默认的servlet来处理 -->
 	<mvc:default-servlet-handler/>
-	
+	<!-- 配置文件上传 解析器-->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> 
+		<property name="defaultEncoding" value="utf-8"/>
+		<!-- 设置上传限制2m -->
+		<property name="maxUploadSize" value="2097152"></property>
+	</bean>
 	
 	<!-- ################## 配置服务消费者(dubbo) ################## -->
     <!-- 配置当前应用的名称 -->
@@ -43,4 +49,10 @@
     -->
     <dubbo:reference interface="com.taotao.admin.service.TestService"
     	id="testService1" timeout="60000"/>
+     <dubbo:reference interface="com.taotao.admin.service.ItemCatService"
+    	id="itemCatService" timeout="60000"/>
+     <dubbo:reference interface="com.taotao.admin.service.ItemService"
+    	id="itemService" timeout="60000"/>
+     <dubbo:reference interface="com.taotao.admin.service.ItemDescService"
+    	id="itemDescService" timeout="60000"/>
 </beans>

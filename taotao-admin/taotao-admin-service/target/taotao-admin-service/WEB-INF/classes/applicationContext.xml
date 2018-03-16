@@ -34,6 +34,11 @@
 		<property name="basePackage" value="com.taotao.admin.mapper" />
 	</bean>
 
+	<!-- 配置通用Mapper的数据访问接口包扫描 -->
+	<bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- 设置数据访问接口类 -->
+		<property name="basePackage" value="com.taotao.admin.mapper"/>
+	</bean>
 	<!-- 配置数据源事务管理器(DataSourceTransactionManager) -->
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
